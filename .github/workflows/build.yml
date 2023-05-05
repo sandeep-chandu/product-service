@@ -14,7 +14,7 @@ on:
     - 'src/*'
     - 'pom.xml'
     - 'Dockerfile'
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 
 jobs:
