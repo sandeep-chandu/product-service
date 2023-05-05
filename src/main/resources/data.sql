@@ -1,0 +1,4 @@
+insert into product(id, title, description, image_url, price) values(1,'almond cake', 'almond cake', 'https://abc.com/1', 10);
+insert into product(id, title, description, image_url, price) values(2,'angel cake', 'a very light sponge cake made without egg yolks', 'https://abc.com/2', 15);
+insert into product(id, title, description, image_url, price) values(3,'Black Forest gateau', 'a chocolate sponge cake containing morello cherries and whipped cream, with chocolate icing', 'https://abc.com/3', 12);
+insert into product(id, title, description, image_url, price) values(4,'chocolate cake', 'a  cake flavoured with cocoa or chocolate', 'https://abc.com/4', 18);
