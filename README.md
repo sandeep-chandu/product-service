@@ -28,15 +28,14 @@ Make sure you have docker installed on the machine.
   
   4.  To access API end points you need to fetch the token, invoke the below Curl command to get the same
       
-        **Read only token**: can perform GET operations only
-        ```
-          curl --location 'https://dev-l0bv5x78cpcytc8k.us.auth0.com/oauth/token' --header 'Content-Type: application/json'
---data '{"client_id":"5tptNmrATV6fHNZKDxyCmTpVnYx0CYiM","client_secret":"jZAdYzWEqcL-aE8Iq2qTpr5YSm6ZdtIgLlAHvGiRa-7E-YG79zXLTK_jyABXxnwn","audience":"https://cake-store/","grant_type":"client_credentials"}'
-        ```
-        
-        **Read & Write token**: can invoke GET, POST, PATCH, PUT and DELETE operations on /cake endpoint
-        ```
-          curl --location 'https://dev-l0bv5x78cpcytc8k.us.auth0.com/oauth/token' --header 'Content-Type: application/json' --data '{"client_id":"uFuAR7howxGo5Rwb3k7j7zBEQ6HGzwwB","client_secret":"gjy6B7fRuHvF7_bsAyk71OeYq70keuvY2W_tDr3zICe60DjiEhHqG2h3rM4gXNR6","audience":"https://cake-store/","grant_type":"client_credentials"}'
+       **Read only token**: can perform GET operations only 
+       ``` 
+       curl --request POST --url https://dev-l0bv5x78cpcytc8k.us.auth0.com/oauth/token  --header 'content-type: application/json' --data '{"client_id":"5tptNmrATV6fHNZKDxyCmTpVnYx0CYiM","client_secret":"jZAdYzWEqcL-aE8Iq2qTpr5YSm6ZdtIgLlAHvGiRa-7E-YG79zXLTK_jyABXxnwn","audience":"https://cake-store/","grant_type":"client_credentials"}' 
+       ```
+       
+       **Read & Write token**: can invoke GET, POST, PATCH, PUT and DELETE operations on /products endpoint 
+       ``` 
+       curl --request POST --url https://dev-l0bv5x78cpcytc8k.us.auth0.com/oauth/token --header 'content-type: application/json' --data '{"client_id":"uFuAR7howxGo5Rwb3k7j7zBEQ6HGzwwB","client_secret":"gjy6B7fRuHvF7_bsAyk71OeYq70keuvY2W_tDr3zICe60DjiEhHqG2h3rM4gXNR6","audience":"https://cake-store/","grant_type":"client_credentials"}' 
         ```
         Copy the value of access_token from the response.
   5. Once the you have access token store/update it in the Authorize section of swagger and invoke the APIs to test.
@@ -44,7 +43,7 @@ Make sure you have docker installed on the machine.
 ### Checkout code, build and test using maven
   1.  Clone this repo (master) branch
   
-  2.  Navigate to /cake-manager folder in the terminal and run the below command
+  2.  Navigate to /product-service folder in the terminal and run the below command
   
       ```
         mvn spring-boot:run
